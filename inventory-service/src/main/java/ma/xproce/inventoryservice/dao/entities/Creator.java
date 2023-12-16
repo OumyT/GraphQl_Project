@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 public class Creator {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Float id;
     private String name;
     private String email;
     @OneToMany(mappedBy = "creator")

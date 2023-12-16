@@ -1,7 +1,8 @@
 package ma.xproce.inventoryservice.mapper;
 
 import ma.xproce.inventoryservice.dao.entities.Video;
-import ma.xproce.inventoryservice.dtos.VideoRequest;
+import ma.xproce.inventoryservice.dtos.VideoDto;
+import ma.xproce.inventoryservice.dtos.VideoDtoInput;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,12 +18,12 @@ public class VideoMapper {
         this.modelMapper = modelMapper;
     }
 
-    public VideoRequest fromVideoToVideoRequest(Video video) {
-        return modelMapper.map(video, VideoRequest.class);
+    public VideoDto fromVideoToVideoDto(Video video) {
+        return modelMapper.map(video, VideoDto.class);
     }
 
-    public Video fromVideoRequestToVideo(VideoRequest videoRequest) {
-        return modelMapper.map(videoRequest, Video.class);
+    public Video fromVideoDtoInputToVideo(VideoDtoInput videoDto) {
+        return modelMapper.map(videoDto, Video.class);
     }
 
 }

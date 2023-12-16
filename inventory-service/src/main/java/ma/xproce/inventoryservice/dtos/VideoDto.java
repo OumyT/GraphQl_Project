@@ -7,11 +7,11 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class VideoRequest {
-    private Long id;
+public class VideoDto {
+    private Float id;
 private String name;
 private String url;
 private  String description;
 private String datePublication;
-private CreatorRequest creator;
+private CreatorDto creator;
 }

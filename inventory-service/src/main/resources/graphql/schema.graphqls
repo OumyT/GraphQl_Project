@@ -19,19 +19,19 @@ type Creator {
 }
 
 type Mutation{
-    saveVideo(video: VideoRequest): Video
-    saveCreator(creator: CreatorRequest): Creator
+    saveVideo(video: VideoDto): Video
+    saveCreator(creator: CreatorDto): Creator
 }
 
-input VideoRequest{
+input VideoDto{
     name : String,
     url : String,
     description : String,
     datePublication : String,
-    creator : CreatorRequest
+    creator : CreatorDto
 }
 
-input CreatorRequest{
+input CreatorDto{
     name : String,
     email : String
 }

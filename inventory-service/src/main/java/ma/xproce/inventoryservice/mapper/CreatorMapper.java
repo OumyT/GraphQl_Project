@@ -1,7 +1,8 @@
 package ma.xproce.inventoryservice.mapper;
 
 import ma.xproce.inventoryservice.dao.entities.Creator;
-import ma.xproce.inventoryservice.dtos.CreatorRequest;
+import ma.xproce.inventoryservice.dtos.CreatorDto;
+import ma.xproce.inventoryservice.dtos.CreatorDtoInput;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,13 +15,13 @@ public class CreatorMapper {
         this.modelMapper = modelMapper;
     }
 
-    public CreatorRequest fromCreatorToCreatorRequest(Creator creator){
+    public CreatorDto fromCreatorToCreatorDto(Creator creator){
 
-        return modelMapper.map(creator, CreatorRequest.class);
+        return modelMapper.map(creator, CreatorDto.class);
     }
 
-    public Creator fromCreatorRequestToCreator(CreatorRequest creatorRequest){
+    public Creator fromCreatorDtoInputToCreator(CreatorDtoInput creatorDto){
 
-        return modelMapper.map(creatorRequest, Creator.class);
+        return modelMapper.map(creatorDto, Creator.class);
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor@NoArgsConstructor
 @ToString
-public class CreatorRequest {
+public class CreatorDto {
 private Float id;
 private  String name;
 private String email;
